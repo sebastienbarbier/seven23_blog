@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.3.1",
+    "@mui/styled-engine-sc": "^5.3.0",
+    "child_process": "^1.0.2",
+    "date-fns": "^2.28.0",
+    "extracted-loader": "^1.0.7",
+    "file-loader": "^6.2.0",
+    "gray-matter": "^4.0.3",
+    "ignore-loader": "^0.1.2",
+    "img-loader": "^4.0.0",
+    "next": "latest",
+    "next-compose-plugins": "^2.2.1",
+    "next-optimized-images": "^2.6.2",
+    "next-transpile-modules": "^9.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1",
+    "styled-components": "^5.3.3",
+    "url-loader": "^4.1.1"
+  }
+}
