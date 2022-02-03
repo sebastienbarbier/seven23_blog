@@ -21,11 +21,11 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/develop'
     steps:
-    - run: cd out
+    - run: cd /home/runner/work/seven23_blog/seven23_blog/out
     - name: OVH Object Storage
       uses: StephaneBour/actions-ovh-storage@1.0
       with:
-        args: 'upload blog ./out'
+        args: 'upload blog .'
       env:
         OS_AUTH_URL: "https://auth.cloud.ovh.net/v3/"
         OS_IDENTITY_API_VERSION: 3
