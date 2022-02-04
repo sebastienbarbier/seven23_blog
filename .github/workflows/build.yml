@@ -19,11 +19,20 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
     needs: build
     if: github.ref == 'refs/heads/develop'
     steps:
     - uses: actions/checkout@v2
-    - run: ls ${{ github.workspace }}
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm i
+    - run: npm run build --if-present
     - name: OVH Object Storage
       uses: StephaneBour/actions-ovh-storage@1.0
       with:
