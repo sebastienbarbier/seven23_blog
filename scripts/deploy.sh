@@ -1,2 +1,2 @@
-cd ${{ github.workspace }}/out
+cd out
 swift upload blog .
