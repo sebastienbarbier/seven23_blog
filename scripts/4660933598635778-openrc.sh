@@ -20,8 +20,6 @@ if [ -z "$OS_USER_DOMAIN_NAME" ]; then unset OS_USER_DOMAIN_NAME; fi
 export OS_PROJECT_DOMAIN_ID="default"
 if [ -z "$OS_PROJECT_DOMAIN_ID" ]; then unset OS_PROJECT_DOMAIN_ID; fi
 # unset v2.0 items in case set
-unset OS_TENANT_ID
-unset OS_TENANT_NAME
 # In addition to the owning entity (tenant), OpenStack stores the entity
 # performing the action as the **user**.
 # export OS_USERNAME="YOUR USERNAME"
