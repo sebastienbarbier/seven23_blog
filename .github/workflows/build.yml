@@ -35,11 +35,10 @@ jobs:
     - run: npm run build --if-present
     - run: ls ${{ github.workspace }}
     - run: ls ${{ github.workspace }}/out
-    - run: cd ${{ github.workspace }}/out
     - name: OVH Object Storage
       uses: StephaneBour/actions-ovh-storage@1.0
       with:
-        args: 'upload blog .'
+        args: 'upload blog ${{ github.workspace }}/out/'
       env:
         OS_AUTH_URL: "https://auth.cloud.ovh.net/v3/"
         OS_IDENTITY_API_VERSION: 3
