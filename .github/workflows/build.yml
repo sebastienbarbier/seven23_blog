@@ -15,22 +15,27 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm i
-    - run: npm run build --if-present    
+    - run: npm run build --if-present
+
   deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
-    - run: ls ${{ github.workspace }}
-    - name: OVH Object Storage
-      uses: StephaneBour/actions-ovh-storage@1.0
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
       with:
-        args: 'upload blog ${{ github.workspace }}/out'
-      env:
-        OS_AUTH_URL: "https://auth.cloud.ovh.net/v3/"
-        OS_IDENTITY_API_VERSION: 3
-        OS_TENANT_ID: ${{ secrets.OS_TENANT_ID }}
-        OS_TENANT_NAME: ${{ secrets.OS_TENANT_NAME }}
-        OS_USERNAME: ${{ secrets.OS_USERNAME }}
-        OS_PASSWORD: ${{ secrets.OS_PASSWORD }}
-        OS_REGION_NAME: "GRA"
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm i
+    - run: npm run build --if-present
+    - run: ls ${{ github.workspace }}
+    - run: ls ${{ github.workspace }}/out
+    - run: source scripts/4660933598635778-openrc.sh
+    - run: pip install python-swiftclient python-keystoneclient --user
+    - run: cd out
+    - run: swift upload blog .
