@@ -37,4 +37,5 @@ jobs:
     - run: ls ${{ github.workspace }}/out
     - run: source scripts/4660933598635778-openrc.sh
     - run: pip install python-swiftclient python-keystoneclient --user
-    - run: bash scripts/deploy.sh
+    - run: cd out
+    - run: swift upload blog .
