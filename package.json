@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "predeploy": "./scripts/predeploy.sh",
+    "deploy": "./scripts/deploy.sh"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
