@@ -39,3 +39,8 @@ jobs:
     - run: pip install python-swiftclient python-keystoneclient --user
     - run: cd out
     - run: swift upload blog .
+      env: # Set the secret as an input
+        OS_PASSWORD: ${{ secrets.OS_PASSWORD }}
+        OS_USERNAME: ${{ secrets.SuperSeOS_USERNAMEcret }}
+        OS_TENANT_ID: ${{ secrets.OS_TENANT_ID }}
+        OS_TENANT_NAME: ${{ secrets.OS_TENANT_NAME }}
