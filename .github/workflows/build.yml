@@ -44,4 +44,4 @@ jobs:
         OS_USERNAME: ${{ secrets.OS_USERNAME }}
         OS_TENANT_ID: ${{ secrets.OS_TENANT_ID }}
         OS_TENANT_NAME: ${{ secrets.OS_TENANT_NAME }}
-        run: swift upload blog . -V 2
+      run: swift upload blog . -V 2
