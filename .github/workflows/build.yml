@@ -38,7 +38,7 @@ jobs:
     - run: source scripts/4660933598635778-openrc.sh
     - run: pip install python-swiftclient python-keystoneclient --user
     - run: cd out
-    - run: swift upload blog .
+    - run: swift upload blog .  -V 2
       env: # Set the secret as an input
         OS_PASSWORD: ${{ secrets.OS_PASSWORD }}
         OS_USERNAME: ${{ secrets.SuperSeOS_USERNAMEcret }}
