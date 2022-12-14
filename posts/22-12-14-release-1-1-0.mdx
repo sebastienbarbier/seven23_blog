@@ -1,0 +1,45 @@
+---
+title: 'Releasing v1.1.0 🎉'
+date: '2022-12-14'
+author: 'Sébastien Barbier'
+---
+
+Hey everyone, we're excited to announce that after six long months, we're finally **releasing a new version** of seven23! We've been working hard to improve the user experience and add some cool new features.
+
+One of the standout features in the new release is the addition of a calendar graph This new feature allows users to easily see their spending habits over time, giving them a better understanding of how there money is spent during the month. The calendar graph is intuitive and easy to use, and it provides a clear and visual representation of a user's spending patterns.
+
+In addition to the calendar graph, we have also made improvements to the signup process for new users. In the past, users were required to create an account before they could try out the app. However, we have now implemented a new "try before you buy" system that allows users to experience the app and all of its features without creating an account. This allows users to see how the app works and decide if it's right for them before committing to creating an account.
+
+Overall, these new features and improvements are aimed at enhancing the user experience and making our web app more effective and user-friendly. We are confident that they will provide significant benefits to our users and help them to better manage their finances.
+
+Here comes a full description of all changes applied within this release :
+
+---
+
+## Client [1.1.0] - 2022-12-13
+### 🐛 Bug Fixes
+- Crash on sync when app edit before creating ([#71](https://github.com/sebastienbarbier/seven23/issues/71))
+### 🛠 Improvements
+- Improved enrollment for new users ([#63](https://github.com/sebastienbarbier/seven23/issues/63))
+- Make dashboard move relevant for new users ([#64](https://github.com/sebastienbarbier/seven23/issues/64))
+- Add a new calendar graph ([#65](https://github.com/sebastienbarbier/seven23/issues/65))
+- Category list in transactions view ignores incomes ([#70](https://github.com/sebastienbarbier/seven23/issues/70))
+
+---
+
+## Server [1.1.0] - 2022-12-13
+### ✨ Feature
+- Allow **SQLite** for data storage ([#49](https://github.com/sebastienbarbier/seven23_server/issues/49))
+### 🔒 Security
+- Update dependencies ([#52](https://github.com/sebastienbarbier/seven23_server/issues/52))
+### 🐛 Bug Fixes
+- Fix broken password/reset/confirm API ([#60](https://github.com/sebastienbarbier/seven23_server/issues/60))
+### 🏗 Chore
+- Migrate **Continous Integration** from travis-ci to **Github actions** ([#40](https://github.com/sebastienbarbier/seven23_server/issues/40))
+- Run within **Docker** ([#48](https://github.com/sebastienbarbier/seven23_server/issues/48))
+
+---
+
+## What's next ?
+
+In our next release, we're excited to announce that we'll be making our app available on the iOS and Android app stores! This has been a highly requested feature and should make the app easier to use for new users. Stay tuned for updates.
