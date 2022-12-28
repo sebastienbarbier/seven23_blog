@@ -9,6 +9,9 @@ import Link from 'next/link'
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
@@ -50,9 +53,9 @@ export default function Post({ postData }) {
             <footer style={{ textAlign: 'right' }}>Written by {postData.author}</footer>
 
             <Box style={{ padding: '40px 0 80px 0'}}>
-              <Link href="/">
-                ← Back to home
-              </Link>
+              <Button component={Link} href="/" startIcon={<ArrowBackIcon />}>
+                Latest articles
+              </Button>
             </Box>
 
           </Grid>

@@ -7,6 +7,12 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import Divider from '@mui/material/Divider';
+import ListItemText from '@mui/material/ListItemText';
+
 import Layout, { siteTitle } from '../components/layout'
 import Date from '../components/date'
 
@@ -34,22 +40,19 @@ export default function Home({ allPostsData }) {
         <Grid container justifyContent="center">
           <Grid item xs={12} sm={10} md={6}>
             <section className={utilStyles.headingMd}>
-              <p>Offical blog of the <a href="https://seven23.io">seven23.io</a> project.</p>
             </section>
-            <h2>Posts</h2>
-            <ul>
-              {allPostsData.map(({ id, date, title }) => (
-                <li className={utilStyles.listItem} key={id}>
-                  <Link href={`/posts/${id}`}>
-                    {title}
-                  </Link>
-                  <br />
-                  <small className={utilStyles.lightText}>
-                    <Date dateString={date} />
-                  </small>
-                </li>
+            <h2>Latest articles</h2>
+            <List>
+             {allPostsData.map(({ id, date, title }) => (
+              <ListItemButton divider={true} component={Link} href={`/posts/${id}`} alignItems="flex-start">
+
+                  <ListItemText
+                    primary={title}
+                    secondary={<Date dateString={date} />}
+                  />
+              </ListItemButton>
               ))}
-            </ul>
+            </List>
           </Grid>
         </Grid>
         </Container>
