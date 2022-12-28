@@ -39,7 +39,7 @@ export default function Post({ postData }) {
       </Head>
       <Container>
         <Grid container justifyContent="center">
-          <Grid item xs={12} sm={10} md={8}  style={{ padding: '60px 0 80px 0'}}>
+          <Grid item xs={12} sm={10} md={8}  sx={{ padding: { xs: '20px 0 30px 0', md: '60px 0 80px 0' }}}>
             <h1>{postData.title}</h1>
           </Grid>
         </Grid>
