@@ -27,7 +27,6 @@ export default class MyDocument extends Document {
                     <meta name="og:title" content={siteTitle} />
                     <meta name="twitter:card" content="summary_large_image" />
                     {/* PWA primary color */}
-                    <meta name="theme-color" content={theme.palette.primary.main} />
                     {/* Inject MUI styles first to match with the prepend: true configuration. */}
                     { this.props.emotionStyleTags }
                     <style jsx global>{``}</style>
