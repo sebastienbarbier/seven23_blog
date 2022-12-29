@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     <title>Seven23 - Budget app</title>
-                    <link rel="icon" href="/favicon.ico" />
+                    <link rel="shortcut icon" type="image/svg" href="/favicon.svg" />
                     
                     <meta
                       name="description"
