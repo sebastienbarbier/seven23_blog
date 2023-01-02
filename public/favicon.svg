@@ -3,8 +3,8 @@
 	    .path { fill: #333 }
 	    .stroke { stroke: #333; }
 	    @media (prefers-color-scheme: dark) {
-	        .path { fill: #ccc; }
-	    	.stroke { stroke: #ccc; }
+	        .path { fill: #eee; }
+	    	.stroke { stroke: #eee; }
 	    }
 	  </style>
 	<clipPath id="a">
