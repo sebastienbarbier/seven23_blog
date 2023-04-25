@@ -1,0 +1,29 @@
+---
+title: 'Improved self-hosting.'
+date: '2023-04-25'
+author: 'Sébastien Barbier'
+---
+
+We're excited to announce the version 1.2.0 release of our server side, which includes significant improvements to the self-hosting experience. With this release, users can take full control over their data and customize their setup to their specific needs, while also enjoying enhanced security, privacy, and cost savings.
+
+One of the key improvements in this release is the streamlined setup process, which makes it easier than ever to get started with self-hosting. Users can now quickly and easily configure their server and install the application, with step-by-step guidance throughout the process. This eliminates many of the technical hurdles that previously made self-hosting a daunting prospect for many users.
+
+Public Docker image can be found on hub.docker [sebastienbarbier/seven23](https://hub.docker.com/r/sebastienbarbier/seven23). This allows users to install our server instance directly on their machine with just a single command, greatly simplifying the installation process. To install the Docker image, simply run the following command:
+
+```bash
+docker run -p 8000:8000 sebastienbarbier/seven23
+```
+
+This will pull the latest version of the Docker image and start the application on port 8000. Users can then access the application in their web browser by navigating to [http://localhost:8000](http://localhost:8000).
+
+Documentation has been updated accordingly and can be found [here](https://seven23-server.readthedocs.io/en/latest/deployment.html).
+
+
+## Server [1.2.0] - 2023-04-24
+### ✨ Feature
+- Publish **docker** image ([#69](https://github.com/sebastienbarbier/seven23_server/issues/69))
+- Improve **self-hosted experience** ([#66](https://github.com/sebastienbarbier/seven23_server/issues/66))
+### 📚 Documentation
+- Fix broken links to **swagger** and **redoc** ([#68](https://github.com/sebastienbarbier/seven23_server/issues/68))
+### 🔒 Security
+- Security updates ([#67](https://github.com/sebastienbarbier/seven23_server/issues/67))
