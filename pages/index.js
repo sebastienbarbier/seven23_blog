@@ -44,7 +44,7 @@ export default function Home({ allPostsData }) {
             <h2>Latest articles</h2>
             <List>
              {allPostsData.map(({ id, date, title }) => (
-              <ListItemButton divider={true} component={Link} href={`/posts/${id}`} alignItems="flex-start">
+              <ListItemButton key={id} divider={true} component={Link} href={`/posts/${id}`} alignItems="flex-start">
 
                   <ListItemText
                     primary={title}
