@@ -33,7 +33,7 @@ export default function Layout({ children, home }) {
         <Container justifyContent="space-between" alignItems="center">
           <Stack container direction="row" justifyContent="space-between" alignItems="center">
             <Link href="/" className={styles.title}>
-              <h1><img src="/images/svg/seven23_logo.svg" alt="Seven23 logo" /> <img src="/images/svg/seven23.svg" alt="Seven23" style={{ height: 28, marginTop: 2 }} /></h1>
+              <h1 style={{ textAlign: 'bottom' }}><img src="/images/svg/seven23_logo.svg" alt="Seven23 logo" /> <img src="/images/svg/seven23.svg" alt="Seven23" style={{ height: 28, marginTop: 2 }} /> <span style={{ fontSize: '0.5em', paddingTop: 9, opacity: 0.9 }}> blog</span></h1>
             </Link>
             <Stack direction="row" alignItems="center" spacing={2} display={{ xs: 'none', md: 'flex' }}>
               <Button href="https://seven23.io" component={Link}>Visit Seven23.io</Button>
