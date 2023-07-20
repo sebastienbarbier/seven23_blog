@@ -43,7 +43,7 @@ export default function Home({ allPostsData }) {
           <Grid item xs={12} sm={12} md={12}>
             <section className={utilStyles.headingMd}>
             </section>
-            <h2>Latest articles</h2>
+            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '4em', paddingTop: 6, paddingBottom: 8 }}>Blog posts</Typography>
             <List>
              {allPostsData.map(({ id, date, title, description }) => (
               <ListItemButton key={id} divider={true} component={Link} href={`/posts/${id}`} alignItems="flex-start">

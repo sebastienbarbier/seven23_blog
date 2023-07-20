@@ -2,12 +2,13 @@ a.title {
 	text-decoration: none;
 	color: black;
 	letter-spacing: -0.5px;
-	h1 {
+	div {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding: 20px 0;
 		img {
-			height: 1.2em;
+			height: 2.6rem;
 			margin-right: 18px;			
 		}
 	}
