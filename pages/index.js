@@ -47,11 +47,11 @@ export default function Home({ allPostsData }) {
             <List>
              {allPostsData.map(({ id, date, title, description }) => (
               <ListItemButton key={id} divider={true} component={Link} href={`/posts/${id}`} alignItems="flex-start">
-                <Stack direction={{xs: 'column', sm: 'row' }} sx={{ paddingTop: 2, paddingBottom: 2 }}>
+                <Stack direction={{xs: 'column', sm: 'row' }} sx={{ paddingTop: 2, paddingBottom: 2, width: '100%' }}>
                   <Box sx={{ textTransform: 'uppercase', fontSize: '.9em', marginRight: 8, marginBottom: 1, width: 150 }}><Date dateString={date} formatString={`LLL dd yyyy`} /></Box>
                   <Box sx={{ width: '100%'}}>
-                    <Typography sx={{ fontSize: '1.1em', fontWeight: 'bold', paddingBottom: 1 }}>{title}</Typography>
-                    <Typography sx={{ fontSize: '0.9em' }}>{ description }</Typography>
+                    <Typography sx={{ fontSize: '1.1em', fontWeight: 'bold', paddingBottom: 1}}>{title}</Typography>
+                    <Typography sx={{ fontSize: '0.9em'}}>{ description }</Typography>
                   </Box>
                 </Stack>
               </ListItemButton>

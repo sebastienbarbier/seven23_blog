@@ -2,10 +2,10 @@
 title: 'Using Docker 🐳'
 date: '2023-09-08'
 author: 'Sébastien Barbier'
-description: 'Server and Frontend are now available as public docker image to self host.'
+description: "Discover the ease of installing and running Seven23's front-end and back-end with our new Docker image, simplifying self-hosting and empowering developers 🚀"
 ---
 
-Seven23 now provides a public Docker image for quickly installing and running both the front-end and backend on your machine 🥳. 
+**Seven23 now provides a public Docker image** for quickly installing and running both the **front-end** and **backend** on your machine 🥳. 
 
 This is part of our [v1.2.1](https://github.com/sebastienbarbier/seven23/releases/tag/v1.2.1) minor release, which was implemented in response to a [user request](https://github.com/sebastienbarbier/seven23/issues/115). It will make it a lot easier for new users to install and maintain their self-hosted instance.
 
@@ -15,7 +15,9 @@ Our project is divided into two main components:
 
 ## Hosting the Web Application
 
-The app is designed to connect to any instance by providing the URL of your server on startup, and it can be used at [app.seven23.io](https://app.seven23.io). If, for some reason, you wish to self-host it, a Docker image [sebastienbarbier/seven23_app](https://hub.docker.com/r/sebastienbarbier/seven23_app) is available.
+The app is designed to connect to any instance by providing the URL of your server on startup, and it can be used at [app.seven23.io](https://app.seven23.io). 
+
+However if you wish to **self-host** it, a Docker image [sebastienbarbier/seven23_app](https://hub.docker.com/r/sebastienbarbier/seven23_app) is now available.
 
 You can run the following command on your machine to access it using any browser at [localhost:8000](http://localhost:8000):
 
@@ -29,7 +31,7 @@ Docker image for our backend is expected to be the most popular one as it allows
 
 A docker image is available as the docker image [sebastienbarbier/seven23](https://hub.docker.com/r/sebastienbarbier/seven23).
 
-To install locally, you can run:
+To install locally, run the following:
 
 ```bash
 docker run -p 8080:80 sebastienbarbier/seven23
@@ -39,7 +41,11 @@ Full description of how to configure it using environment variables can be found
 
 ## As a Developer
 
-Docker images mostly resonate with developers as an easy-to-use solution. They also enable us to improve our internal processes, such as deploying a full backend to test each new version of our application within our Continuous Integration (CI) tool. This is achieved by defining a service within GitHub Actions and describing it within the [.github/workflows/build.yaml](https://github.com/sebastienbarbier/seven23/blob/main/.github/workflows/build.yaml) file:
+Docker images mostly resonate with developers as an **easy-to-use** solution. 
+
+They also enable us to improve our internal processes, such as deploying a full backend to test each new version of our application within our **Continuous Integration (CI)** tool. 
+
+This is achieved by defining a service within GitHub Actions and describing it within the [.github/workflows/build.yaml](https://github.com/sebastienbarbier/seven23/blob/main/.github/workflows/build.yaml) file:
 
 ```yaml
 name: "Build and Deploy"
